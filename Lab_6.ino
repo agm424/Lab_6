@@ -1,3 +1,5 @@
+
+//Declarations
 int ledPin[4] = {2, 3, 4, 5};
 int buttonPin[4] = {33, 35, 37, 39};
 int buttonPinforward = 31;
@@ -13,6 +15,8 @@ boolean stepState[3][4] = {{false, false, false, false}, {false, false, false, f
 int tempo = 0;
 int currentStep = 0;
 unsigned long lastStepTime = 0;
+
+//Setup
 void setup() {
   pinMode(buttonPinforward, INPUT);
   pinMode(buttonPinback, INPUT);
@@ -21,6 +25,7 @@ void setup() {
     pinMode(ledPin[i], OUTPUT);
   }
 }
+//Proper Loops
 void loop() {
   buttonCounterforward();
   buttonCounterback();
